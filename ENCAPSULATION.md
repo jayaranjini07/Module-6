@@ -4,22 +4,33 @@
 ---
 
 ### AIM  
-To write a Python program to create a class `Student` with the private members `name` and `age`, and add getter and setter methods to initialize and modify the `age` variable.
+To create a class student with members name ,age,rollno and an user defined function show() to display the details of the student ,use the getter and setter method Information Hiding and conditional logic for setting an object attributes.
 
 ---
 
 ### ALGORITHM
 
 1. **Start the Program.**
-2. **Define the `Student` class.**
-   - Inside the `Student` class, define the `__init__` method to initialize `name` and the private member `__age`.
-3. **Define a getter method** `get_age` to return the value of the private member `__age`.
-4. **Define a setter method** `set_age` to set a new value to the private member `__age`.
-5. **Create an object `stud`** of the `Student` class with the name 'Jessa' and age 14.
-6. **Print the name and the age** of `stud` using the getter method.
-7. **Use the setter method** `set_age` to change the age of `stud` to 16.
-8. **Print the name and the updated age** of `stud` using the getter method.
-9. **End the program.**
+2. Define a class Student with:
+  -An __init__ constructor method that initializes:
+  -name (public attribute)
+  -__roll_no and __age (private attributes, using double underscores)
+4. Create a method show() to display the student's name and roll number.
+5. Create a getter method get_roll_no(): Returns the value of private member __roll_no.
+6. Create a setter method set_roll_no(number):
+-Checks if number > 50:
+  -If yes, it prints a warning and does not update __roll_no.
+  -If no, it updates __roll_no to the given number.
+7. Create an object jessa with:
+-name = 'Jessa', roll_no = 10, age = 15
+8. Call jessa.show(): Displays: "Student Details: Jessa 10"
+9. Call jessa.set_roll_no(120):
+-Since 120 > 50, the setter rejects the change and prints:
+ -"Invalid roll no. Please set correct roll number"
+10. Call jessa.set_roll_no(25):
+-Since 25 ≤ 50, the setter updates __roll_no to 25.
+11. Call jessa.show() again: Displays: "Student Details: Jessa 25"
+12. **End the program.**
 
 ---
 
